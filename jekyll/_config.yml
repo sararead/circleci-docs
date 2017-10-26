@@ -72,3 +72,6 @@ segment: 'mAJ9W2SwLHgmJtFkpaXWCbwEeNk9D8CZ'
 analytics:
   events:
     go_button_clicked: go-button-clicked
+
+plugins:
+  - octopress-debugger

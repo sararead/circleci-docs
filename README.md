@@ -8,6 +8,14 @@ For larger edits or new articles, you'll want to set up a local environment for 
 
 If you have a question or need help debugging, please head to [CircleCI Discuss](https://discuss.circleci.com/) where our support team will help you out.
 
+# Reference
+
+[Jekyll documentation](https://jekyllrb.com/docs/home/)
+
+Jekyll uses Shopify's Liquid templating engine.  [Liquid's documentation](https://help.shopify.com/themes/liquid)
+
+If you're having trouble understanding how templates are parsed and structured, the Gemfile includes the Octopress Debugger plugin.  With this, you will be able to interact with templates and their metadata by inserting `{% debug %}` statements.  Note that using this plugin may require developing on your local host system instead of within Docker.  [Octopress-debugger documentation](https://github.com/octopress/debugger)
+
 ## License Information
 Documentation (guides, references, and associated images) is licensed as Creative Commons Attribution-NonCommercial-ShareAlike CC BY-NC-SA. The full license can be found [here](http://creativecommons.org/licenses/by-nc-sa/4.0/legalcode), and the human-readable summary [here](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
