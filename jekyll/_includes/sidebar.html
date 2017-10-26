@@ -71,6 +71,33 @@
 					</li>
 				</ul>
 			{% endif %}
+      <div>WIP section</div>
+      {% assign subcategories = site.collections | where: "subcategory", section.label %}
+
+
+      {% assign ccie = site.collections | where: "name", "Enterprise Docs" %}
+      <ul>
+        {% for subcategory in subcategories %}
+
+          <div>{{ subcategory.name }}</div>
+          {% for doc in subcategory.docs %}
+            <li>
+              {% if doc.hide != true %}
+                {% if doc.short-title %}
+                  {% assign title = doc.short-title %}
+                {% else %}
+                  {% assign title = doc.title %}
+                {% endif %}
+              {% endif %}
+
+              {% if doc.children %}
+                {% capture title %}{{ title }} ({{ doc.children | size }}){% endcapture %}
+              {% endif %}
+              <a href="{{ site.baseurl }}{{ doc.url }}">{{ doc.title }}</a>
+            </li>
+          {% endfor %}
+        {% endfor %}
+      </ul>
 		{% endcapture %}
 		{{ sidebar | strip_newlines }}
 		</ul>

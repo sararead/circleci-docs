@@ -55,6 +55,14 @@ collections:
     permalink: /api/:path/
     prefix: "/api"
     selectorName: "API"
+  cci2_system_administrators:
+    name: "System Administrators"
+    site_section: false
+    output: true
+    subcategory: "cci2"
+    prefix: "/2.0/system-administrators"
+    permalink: /2.0/system-administrators/:path/
+
 
 twitter_username: circleci
 github_username: circleci
